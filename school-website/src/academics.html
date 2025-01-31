@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fdf5e6; /* Cream background */
+        }
+
+        header {
+            background: #8B0000; /* Horse Blood (deep red/maroon) */
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #660000; /* Darker shade of Horse Blood */
+            padding: 0.5rem 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1.1rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #8B0000; /* Horse Blood */
+            font-size: 2rem;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .price-col {
+            flex: 1;
+            min-width: 250px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .price-col:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .price-col p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .price-col h3 {
+            font-size: 28px;
+            color: #8B0000; /* Horse Blood */
+            margin: 20px 0;
+        }
+
+        .price-col h3 span {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .price-col ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .price-col ul li {
+            margin: 10px 0;
+            color: #666;
+        }
+
+        .price-col button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #8B0000; /* Horse Blood */
+            color: #fff;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .price-col button:hover {
+            background-color: #660000; /* Darker Horse Blood */
+        }
+
+        section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #8B0000; /* Horse Blood */
+            font-size: 2rem;
+        }
+
+        .class {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .class:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .class h3 {
+            color: #8B0000; /* Horse Blood */
+            margin-bottom: 10px;
+        }
+
+        .class p {
+            margin: 5px 0;
+            color: #666;
+        }
+
+        .class strong {
+            color: #333;
+        }
+
+         footer {
+            background: #660000; /* Darker Horse Blood */
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+
+        footer .footer-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        footer .footer-content div {
+            flex: 1;
+            margin: 1rem;
+            min-width: 200px;
+        }
+
+        footer h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer .social-media a {
+            margin: 0 0.5rem;
+        }
+
+        footer .copyright {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav a {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Admission & Fees Structure</h1>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="admissions.html">Admissions</a>
+            <a href="academics.html">Academics</a>
+            <a href="news.html">NEWS</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>SCHOOL FEES REQUIREMENTS FOR NEW-IN-TAKE</h2>
+        <div class="price-row">
+            <div class="price-col">
+                <p>Foundation - Nursery 2</p>
+                <h3>15k<span>/term</span></h3>
+                <ul>
+                    <li>Uniform</li>
+                    <li>Examination & PTA Levy</li>
+                    <li>Sweater</li>
+                    <li>Sportswear</li>
+                    <li>10 Apple Writing Books</li>
+                    <li>Numbers Textbook</li>
+                    <li>Alphabet Textbooks</li>
+                </ul>
+                <button onclick="window.location.href='payment_website_url'">Select</button>
+            </div>
+            <div class="price-col">
+                <p>Primary 1 - Primary 5</p>
+                <h3>30k<span>/term</span></h3>
+                <ul>
+                    <li>Uniform</li>
+                    <li>Sweater</li>
+                    <li>Sportswear</li>
+                    <li>10 Apple Writing Books</li>
+                    <li>Numbers Textbook</li>
+                    <li>Alphabet Textbooks</li>
+                </ul>
+                <button onclick="window.location.href='payment_website_url'">Select</button>
+            </div>
+            <div class="price-col">
+                <p>JSS 1 - JSS 3</p>
+                <h3>45k<span>/term</span></h3>
+                <ul>
+                    <li>Uniform</li>
+                    <li>Sweater</li>
+                    <li>Sportswear</li>
+                    <li>10 Apple Writing Books</li>
+                    <li>Numbers Textbook</li>
+                    <li>Alphabet Textbooks</li>
+                </ul>
+                <button onclick="window.location.href='payment_website_url'">Select</button>
+            </div>
+        </div>
+    </div>
+    <section>
+        <h1>Requirements For Each Class</h1>
+        <div class="class">
+            <h3>Foundation</h3>
+            <p><strong>School Fees:</strong> 20k per term</p>
+            <p><strong>Necessary Materials:</strong> Textbooks: ABC Primer, Picture Dictionary</p>
+        </div>
+        <div class="class">
+            <h3>Primary 1</h3>
+            <p><strong>School Fees:</strong> 23k per term</p>
+            <p><strong>Necessary Materials:</strong> Textbooks: English for Primary Schools, Basic Mathematics</p>
+        </div>
+        <div class="class">
+            <h3>Primary 2</h3>
+            <p><strong>School Fees:</strong> 26k per term</p>
+            <p><strong>Necessary Materials:</strong> Textbooks: English for Primary Schools, Basic Mathematics</p>
+        </div>
+        <div class="class">
+            <h3>JSS 1</h3>
+            <p><strong>School Fees:</strong> 30k per term</p>
+            <p><strong>Necessary Materials:</strong> Textbooks: Integrated Science, Basic Technology</p>
+        </div>
+        <div class="class">
+            <h3>JSS 2</h3>
+            <p><strong>School Fees:</strong> 35k per term</p>
+            <p><strong>Necessary Materials:</strong> Textbooks: Integrated Science, Basic Technology</p>
+        </div>
+        <div class="class">
+            <h3>JSS 3</h3>
+            <p><strong>School Fees:</strong> 40k per term</p>
+            <p><strong>Necessary Materials:</strong> Textbooks: Integrated Science, Basic Technology</p>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>About Us</h3>
+                <p>Date Established: September 2013</p>
+                <p>Curriculum: British Nigerian</p>
+            </div>
+            <div>
+                <h3>Contact Us</h3>
+                <p>Location: Ali Balogun Street Mararaba, Aso B Jeunjidna Phase 4</p>
+                <p>Phone: +234-902-801-6455</p>
+                <p>Email: <a href="mailto:adegunjusamuel29@gmail.com">adegunjusamuel29@gmail.com</a></p>
+                <div class="social-media">
+                    <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                    <a href="https://www.twitter.com" target="_blank">Twitter</a>
+                    <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                </div>
+            </div>
+        </div>
+            <div>
+                <h3>Living Facility</h3>
+                <p>Day and Boarding</p>
+            </div>
+        <div class="copyright">
+            <p>&copy; 2024 The Lord's Royal Diadem Heritage International School. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
